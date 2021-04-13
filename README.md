@@ -29,7 +29,7 @@ Or
 
 ## Usage
 
-###Writing files
+### Writing files
 
 To write file
 ```php
@@ -42,7 +42,7 @@ $stream = fopen('/path/to/somefile.ext', 'r+');
 Yii::$app->minio->writeStream('filename.ext', $stream);
 ```
 
-###Reading files
+### Reading files
 
 To read file
 ```php
