@@ -1,0 +1,23 @@
+{
+  "name": "bevin1984/yii2-minio",
+  "description": "MinIO client component for Yii2 framework",
+  "type": "yii2-component",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bevin Chen",
+      "email": "bevin1984@gmail.com"
+    }
+  ],
+  "keywords": ["yii2", "yii2-components", "s3client", "minio", "php7"],
+  "require": {
+    "php": ">=7.0",
+    "yiisoft/yii2": "^2.0.0",
+    "aws/aws-sdk-php": "^3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Minio\\": "src/"
+    }
+  }
+}
