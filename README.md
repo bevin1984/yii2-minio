@@ -56,6 +56,12 @@ $contents = stream_get_contents($stream);
 fclose($stream);
 ```
 
+### Saving file
+To save file
+```php
+Yii::$app->minio->save('filename.ext', '/path/to/somefile.ext');
+```
+
 ### Checking if a file exists
 
 To check if a file exists
@@ -70,7 +76,7 @@ To delete file
 Yii::$app->minio->delete('filename.ext');
 ```
 
-### Copy files
+### Copying files
 
 To copy file
 
@@ -107,5 +113,19 @@ $timestamp = Yii::$app->minio->getTimestamp('filename.ext');
 To get file size
 
 ```php
-$timestamp = Yii::$app->minio->getSize('filename.ext');
+$size = Yii::$app->minio->getSize('filename.ext');
+```
+
+### Getting url
+
+To get file url
+
+```php
+$url = Yii::$app->minio->getObjectUrl('filename.ext');
+```
+
+To get file presigned url
+
+```php
+$url = Yii::$app->minio->getPresignedUrl('filename.ext', 300);
 ```
