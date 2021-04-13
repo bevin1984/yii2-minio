@@ -32,12 +32,12 @@ Or
 ###Writing files
 
 To write file
-```
+```php
 Yii::$app->minio->write('filename.ext', 'contents');
 ```
 
 To write file using stream contents
-```
+```php
 $stream = fopen('/path/to/somefile.ext', 'r+');
 Yii::$app->minio->writeStream('filename.ext', $stream);
 ```
@@ -45,12 +45,12 @@ Yii::$app->minio->writeStream('filename.ext', $stream);
 ###Reading files
 
 To read file
-```
+```php
 $contents = Yii::$app->minio->read('filename.ext');
 ```
 
 To retrieve a read-stream
-```
+```php
 $stream = Yii::$app->minio->readStream('filename.ext');
 $contents = stream_get_contents($stream);
 fclose($stream);
