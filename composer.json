@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Minio\\": "src/"
+      "bevin1984\\": "src/"
     }
   }
 }

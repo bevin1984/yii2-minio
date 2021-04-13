@@ -1,6 +1,6 @@
 <?php
 
-namespace Minio;
+namespace bevin1984;
 
 use Aws\Exception\AwsException;
 use Aws\S3\Exception\DeleteMultipleObjectsException;
@@ -503,87 +503,4 @@ class MinioClient extends Component
         }
         return false;
     }
-
-//    /**
-//     * List contents of a directory.
-//     *
-//     * @param string $directory The directory to list.
-//     * @param bool   $recursive Whether to list recursively.
-//     *
-//     * @return array A list of file metadata.
-//     */
-//    public function listContents($directory = '', $recursive = false);
-
-//
-//    /**
-//     * Get a file's visibility.
-//     *
-//     * @param string $path The path to the file.
-//     *
-//     * @throws FileNotFoundException
-//     *
-//     * @return string|false The visibility (public|private) or false on failure.
-//     */
-//    public function getVisibility($path);
-//
-
-//    /**
-//     * Rename a file.
-//     *
-//     * @param string $path    Path to the existing file.
-//     * @param string $newpath The new path of the file.
-//     *
-//     * @throws FileExistsException   Thrown if $newpath exists.
-//     * @throws FileNotFoundException Thrown if $path does not exist.
-//     *
-//     * @return bool True on success, false on failure.
-//     */
-//    public function rename($path, $newpath);
-//
-//    /**
-//     * Copy a file.
-//     *
-//     * @param string $path    Path to the existing file.
-//     * @param string $newpath The new path of the file.
-//     *
-//     * @throws FileExistsException   Thrown if $newpath exists.
-//     * @throws FileNotFoundException Thrown if $path does not exist.
-//     *
-//     * @return bool True on success, false on failure.
-//     */
-//    public function copy($path, $newpath);
-//
-//    /**
-//     * Delete a file.
-//     *
-//     * @param string $path
-//     *
-//     * @throws FileNotFoundException
-//     *
-//     * @return bool True on success, false on failure.
-//     */
-//    public function delete($path);
-//
-//
-//
-//    /**
-//     * @param string $bucket
-//     * @return false|string
-//     */
-//    public static function createPublicPolicy(string $bucket)
-//    {
-//        $policy = [
-//            'Version' => '2012-10-17',
-//            'Statement' => [
-//                [
-//                    'Sid'       => 'Public',
-//                    'Effect'    => 'Allow',
-//                    'Principal' => ['AWS' => ['*']],
-//                    'Action'    => ['s3:GetObject'],
-//                    'Resource'  => ['arn:aws:s3:::'.$bucket.'/*']
-//                ]
-//            ]
-//        ];
-//        return json_encode($policy,JSON_UNESCAPED_SLASHES);
-//    }
 }
